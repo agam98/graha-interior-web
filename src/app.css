@@ -1,0 +1,63 @@
+/* Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Layout */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Hero Section */
+.hero-section {
+  @apply relative pt-20 min-h-screen flex items-center text-white;
+  background-color: theme('colors.primary');
+}
+
+.hero-section::before {
+  content: '';
+  @apply absolute inset-0 bg-black/20 z-[1];
+}
+
+.hero-section > .container {
+  @apply relative z-[2];
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  @apply py-20 bg-gray-50;
+}
+
+.category-button {
+  @apply px-6 py-2 rounded-full transition-all duration-300 font-medium;
+}
+
+.category-button-active {
+  @apply bg-accent text-white shadow-md;
+}
+
+.category-button-inactive {
+  @apply bg-white text-gray-600 hover:bg-gray-100;
+}
+
+/* Contact Section */
+.contact-section {
+  @apply py-20 bg-white;
+}
+
+.contact-form {
+  @apply bg-white p-6 rounded-xl shadow-lg;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg 
+    focus:outline-none focus:border-accent transition-colors duration-300 
+    bg-gray-50 hover:bg-white;
+}
