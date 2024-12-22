@@ -3,7 +3,7 @@ import { Footer } from './components/layout/Footer'
 import { Hero } from './components/home/Hero'
 import { Portfolio } from './components/portfolio/Portfolio'
 import { Contact } from './components/contact/Contact'
-import './index.css'
+import './app.css'
 
 export function App() {
   return (
